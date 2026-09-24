@@ -32,45 +32,41 @@
     padding: 4rem 0 2rem;
   }
 
-  /* Navbar */
+  /* Navbar Mobile Dropdown */
   .nav-menu {
-    position: fixed;
-    top: -100%;
+    position: absolute;
+    top: -400px; /* Hide above */
     left: 0;
     width: 100%;
     background-color: var(--white-color);
-    padding: 4rem 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: .4s;
-    z-index: var(--z-fixed);
+    padding: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: .4s ease-in-out;
+    z-index: -1; /* Dropdown animates from behind header */
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0 0 20px 20px;
   }
 
   .show-menu {
-    top: 0;
+    top: 70px; /* Header height */
   }
 
   .nav-list {
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
     text-align: center;
   }
 
-  .nav-close, .nav-toggle {
+  .nav-toggle {
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary-color);
   }
 
-  .nav-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
-
+  /* nav-close is removed from HTML */
   .nav-btn {
     display: none; /* Hide button on mobile navbar to save space, user can order in menu section */
   }
@@ -125,9 +121,21 @@
     font-size: 2rem;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .hero-img {
     width: 100%;
     max-width: 300px;
+    height: auto;
   }
 
   .promo-title {

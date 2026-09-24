@@ -147,21 +147,14 @@ const WA_NUMBER = "6285791437530";
 /* ==================== SHOW MENU ==================== */
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
-    navMenu.classList.add('show-menu');
+    navMenu.classList.toggle('show-menu');
   });
 }
 
-if (navClose) {
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu');
-  });
-}
-
-// Remove menu mobile
+// Remove menu mobile when a link is clicked
 const navLink = document.querySelectorAll('.nav-link');
 const linkAction = () => {
   navMenu.classList.remove('show-menu');
